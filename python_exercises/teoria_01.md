@@ -1,4 +1,4 @@
-Git:
+                                                    GIT:
 
 Git es un Sistema de Control de Versiones Distribuido (DVCS) utilizado para guardar diferentes versiones de un archivo (o conjunto de archivos) para que cualquier versión sea recuperable cuando lo desee.
 También facilita el registro y comparación de diferentes versiones de un archivo. Esto significa que los detalles sobre qué cambió, quién cambió qué, o quién ha iniciado una propuesta, se pueden revisar en cualquier momento.
@@ -50,3 +50,23 @@ La carpeta .git también es donde Git guarda las bases de datos de objetos y met
     * Los archivos en el estado acometido residen en el directorio Git.
 
 En la imagen (flujo_git.png) se puede observar como es el flujo en git.
+
+1) Modificar archivos en el directorio de trabajo. (Aquí estoy trabajando en la carpeta de mi lap)
+   Observe que cualquier archivo que modifiques se convierte en un archivo en el estado modificado.
+   
+2) Prepare selectivamente los archivos que quieras confirmar al directorio .git. ()
+   Observe que cualquier archivo que prepares (agregues) a la zona de preparación se convierte en un archivo en el estado preparado.  
+   También tenga en cuenta que los archivos preparados todavía no están en la base de datos .git.
+   Preparar significa que la información sobre el archivo preparado se incluye en un archivo (llamado "index") en el repositorio .git.
+         
+           En este caso hago "git add ." o "git add (nombre del archivo)" y te esta manera ya lo tendré en mi staging area. 
+
+3) Confirme los archivos que has preparado en el directorio .git. 
+   Es decir, guardar de manera permanente una "copia" de los archivos preparados en la base de datos .git.
+   Observe que cualquier versión del archivo que confirmes al directorio .git se convierte en un archivo en el estado confirmado.
+
+           Usamos git commit -m "(mesaje)" , es muy importante agregar, o buena practica, el comentario, así facilita el ver los cambios hechos.
+
+                                        GITHUB:
+
+Es una plataforma basada en la web donde los usuarios pueden alojar repositorios Git. Facilita compartir y colaborar fácilmente en proyectos con cualquier persona en cualquier momento.
