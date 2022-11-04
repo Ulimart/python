@@ -5,8 +5,7 @@
 ###   l => long
 ###   d => double
 
-from array import *
-from audioop import lin2alaw   ### para trabajar con los arrays se necesita la libreria array
+from array import *   ### para trabajar con los arrays se necesita la libreria array
 
 #nums = array('i', [45, 324, 654, 45, 264])
 #print(nums)
