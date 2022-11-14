@@ -336,3 +336,17 @@ def ver_algo():
         print(row)
     file.close()
 
+cambio = True
+while cambio == True:
+    print("1. Agregar al archivo")
+    print("2. Checar lo que agregaste")
+    print("3. Essssssssssssssssssstap a las llamadas")
+    selec = int(input("Que numero vas a querer elegir???: "))
+    if selec == 1:
+        agr_file()
+    elif selec == 2:
+        ver_algo()
+    elif selec == 3:
+        cambio = False
+    else:
+        print("Tu respuesta no está dentro del menú!!! ;) ")
