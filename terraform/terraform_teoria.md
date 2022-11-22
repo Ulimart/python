@@ -36,7 +36,7 @@ Al crear nuevas máquinas o un servidor con una base de datos "x" al añadirle a
 - Control de versiones (Pull request)
 - Integración continua
 - Conocimiento compartido y documentado
--Automatización
+- Automatización
 
 #### ***Planes de Ejecución***
 
