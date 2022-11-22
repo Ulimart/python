@@ -122,6 +122,7 @@ Sirve para aplicar cambios requeridos y btener la configuración deseada; o pred
 - Es muy bueno para versionar infra.
 
 - Se puede tener versionado en:
+
         - s3
         - repositorio git
 
