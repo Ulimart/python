@@ -90,3 +90,53 @@ Baja el estado de mi infra para compararlo con lo que se le pidió que hiciera, 
 
 *terraform apply*
 Sirve para aplicar cambios requeridos y btener la configuración deseada; o predeterminar el grupo de acciones que se deben realizar en el terraform plan.
+
+### ***Algo más de Terrform***
+
+- Con esta herramienta podemos definir y desplegar la infra desde código fuente.
+
+- Los módulos nos ayudan a no repetir la infra, lo cual no se escribirá el código más veces,
+
+### ***Añadiendo más a la definición de Terraform***
+
+- Herramiento de orquestación de códifo abierto desarrollado por Hashicorp, nos permite definir nuestra infra como código.
+
+- Usa un lenguaje de programación declarativo y simple
+
+- Tiene soporte para una gran cantidad de proveedores de infra local o en la nube.
+
+- Terraform no se limita a un proveedor específico
+
+- Sintaxis simple y unificada que permite administrar casi cualquier recurso en lugar de requerir que se utilicen herramientas independientes para cada plataforma y servicio.
+
+- Las config que se realizan en terraform puede ser compartida y reutilizable.
+
+- Terraform puede suplir a *cloudformation*
+
+- Tiene facilidad para trabajar con varios prov
+
+- Salva estados; al crear una plantilla creamos el edo que queremos que tenga nuestra infra.
+
+- Si al entrar a la plataforma y se hacen cambios, al correr algún comando de terraform, este compara lo realizado con lo anterior.
+
+- Es muy bueno para versionar infra.
+
+- Se puede tener versionado en:
+        - s3
+        - repositorio git
+
+##### *Beneficios de Terraform*
+
+- Administra infra considerablemente grandes o puede administrar una sola app.
+
+- El modelo de su centro de datos puede ser versionado, lo que esta forma es más sencillo de observar el progreso de nuestro servicio y controlar los cambios.
+
+##### *Desventajas*
+
+- Delay al momento de las actualizaciones
+
+***CLI*** => Command-line interface, se espera que los comandos de terraform se corran en este.
+
+***IaaS*** => Infra como código
+
+***PaaS*** =>
