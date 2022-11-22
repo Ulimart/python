@@ -51,10 +51,10 @@ Terraform avisará los cambios que se aplicarán, si llevas a cabo ciertos cambi
 
 Estos son cuatro:
 
-1. ***Resourses***: 
+1. ***Resourses*** : 
 La infra se construye con recursos; ejemplo: s3, balanceador de carga
 
-2. ***Providers***: 
+2. ***Providers*** : 
 Responsables del ciclo de vida de un recurso; ejemplo: en amazon, un provider es el responsable del tiempo de vida de una lamda o de un s3.
 
                 *** PROVIDERS MAS IMPORTANTES ***
@@ -69,9 +69,9 @@ Responsables del ciclo de vida de un recurso; ejemplo: en amazon, un provider es
 - Github
 - Kubernetes
 
-3. ***State***: Muy importante, es el estado de nestra infra. Ambiente de desarrollo???
+3. ***State*** : Muy importante, es el estado de nestra infra. Ambiente de desarrollo???
 
-4. ***Modulos***: Auydan a ahorrar líneas de trabajo.
+4. ***Modulos*** : Auydan a ahorrar líneas de trabajo.
 Ejemplo: Si quiero crear 10 recursos con un solo módulo, puedo repetirlo y se soluciona.
 Hacer una función que ayude a agilizar el trabajo.
 
