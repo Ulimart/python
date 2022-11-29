@@ -1,3 +1,8 @@
+#              UNDERSTANDING TERRAFORM HCL
+
+Es importante tener en cuenta que los archivos para terraform deben de terminar con *.tf*
+Checar código *proof_01*
+
 #              FIRST STEPS IN TERRAFORM & AWS
 
 - AWS
@@ -17,3 +22,5 @@ Tener en vuenta que Terraform se puede usar con otros proveedores de la nube.
 
     4. La infra puede ser destruida si ya no es necesaria, con el comando: terraform destroy. De esta manera no se va a pagar extra por el uso de instancias en AWS.
     Es importante tener cuidado con este comando para el entorno de producción ya que eliminará todos los recursos.
+
+#              TERRAFORM VARIABLE TYPES
