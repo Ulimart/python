@@ -1,4 +1,0 @@
-variable "myvar" {
-  type = "string"
-  default = "Holiiiii amikoooos"
-}
