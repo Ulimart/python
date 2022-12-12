@@ -58,3 +58,11 @@ Terraform intenta seleccionar un tipo de resultado al que se puedan convertir to
     Error: Error in function call
 
     Call to function "coalesce" failed: all arguments must have the same type.
+
+***DEMO 03***
+
+### >>
+Cuando se usa doble ese simbolo significa que agrega más info al archivo, NO REEMPLAZA
+
+### >
+Esto SÍ REEMPLAZA info, así que si se requiere sobreescribir es mejor usar este simbolo
