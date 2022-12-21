@@ -184,8 +184,11 @@ Son usados por el programa BitTorrent, que sirve para e intercambio de ficheros.
 - ***Puerto 8080:***
 Puerto alternativo al *puerto 80 TCP* para servidores web, normalmente se utiliza este puerto en *pruebas*.
 
-Puertos 51400: Es el puerto utilizado de manera predeterminada por el programa Transmission para descargar archivos a través de la red BitTorrent.
-Puerto 25565: Puerto usado por el famoso videojuego Minecraft.
+- ***Puertos 51400:***
+Es el puerto utilizado de manera predeterminada por el programa Transmission para descargar archivos a través de la red BitTorrent.
+
+- ***Puerto 25565:***
+Puerto usado por el famoso videojuego Minecraft.
 
 ### VPC
 
