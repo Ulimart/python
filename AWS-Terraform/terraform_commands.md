@@ -21,5 +21,5 @@ Checar TERRAFORMING.
 |state                 |Este comando se utiliza para la gestión avanzada del state. Ejemplo: Renombrar un recurso con terraform state mv aws_instance.production => aws_instance.production                                       |
 |taint                 |Marca manualmente un recurso como *taint*, significa que será destruido y recreado la próxima vez que se aplique. Así que si algo está mal con el recurso y se quiere recrear entonces se usa este comando|
 |validate              |Valida la sintaxis de terraform                                                         |
-|untaint               |Deshace el untaint|
+|untaint               |Deshace el untaint, al utilizarlo no cambiará la infraestructura|
 
