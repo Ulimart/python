@@ -20,7 +20,7 @@ Para referirse a cualquier atributo especificando los soguientes elementos en su
 
 
 al aplicarlo quedaría así:
-![Output IP](python/AWS-Terraform/demo_03/output.png)
+![Output IP](https://github.com/Ulimart/python/tree/AWS-Terraform/AWS-Terraform/demo_03/output.png)
 
 en la consola de AWS, se ve de está forma:
-![Consola AWS](python/AWS-Terraform/demo_03/aws_ip.png)
+![Consola AWS](https://github.com/Ulimart/python/tree/AWS-Terraform/AWS-Terraform/demo_03/aws_ip.png)
