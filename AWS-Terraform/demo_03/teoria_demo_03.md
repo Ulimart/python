@@ -20,4 +20,7 @@ Para referirse a cualquier atributo especificando los soguientes elementos en su
 
 
 al aplicarlo quedaría así:
-![Output IP](C:\Users\carolina.montano\Desktop\Terraform\python\terraform\demo_03\output.png)
+![Output IP](./AWS-Terraform/demo_03/output.png)
+
+en la consola de AWS, se ve de está forma:
+![Consola AWS](./AWS-Terraform/demo_03/aws_ip.png)
