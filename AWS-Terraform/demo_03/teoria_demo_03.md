@@ -16,11 +16,8 @@ Para referirse a cualquier atributo especificando los soguientes elementos en su
 
     - El tipo del recurso: aws_instance
 
-
-
-
 al aplicarlo quedaría así:
-![Output IP](https://github.com/Ulimart/python/AWS-Terraform/python/AWS-Terraform/demo_03/output.png)
+![Output IP](AWS-Terraform/demo_03/output.jpg)
 
 en la consola de AWS, se ve de está forma:
-![Consola AWS](https://github.com/Ulimart/python/AWS-Terraform/python/AWS-Terraform/demo_03/aws_ip.png)
+![Consola AWS](AWS-Terraform/python/AWS-Terraform/demo_03/aws_ip.png)

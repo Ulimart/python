@@ -1,0 +1,17 @@
+### esto debe servir para no tener problemas con
+### con los archivos pesados
+**\.terraform\*
+**/.terraform/*
+.terraform.lock.*
+
+### no se vean los siicretssss!!!
+*.tfvars
+
+*.tfstate
+*.tfstate.*
+
+### llaves
+**/sicretsss/*
+
+**/aws/*
+awscliv2.zip
