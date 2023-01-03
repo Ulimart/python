@@ -34,8 +34,12 @@ INSERTAR LA MUGROSA IMAGEN.
 - Se crean los rangos de las subredes, 10.X.X.X/Y
 
 En el caso de la Y, se puede elegir 8, 16, 24, 32.
+
  8  => 16,777,214   Full range
+
  16 => 65,536       Acceso más grande 
+ 
  24 => 256          Quizás para un proyecto pequeño, ¿está es la ip de casa?
+ 
  32 => 1            Single host
 
