@@ -40,6 +40,36 @@ En el caso de la Y, se puede elegir 8, 16, 24, 32.
  16 => 65,536       Acceso más grande 
  
  24 => 256          Quizás para un proyecto pequeño, ¿está es la ip de casa?
- 
+
  32 => 1            Single host
 
+- ***Subredes privadas***
+
+Al configurar una VPC, las direcciones IP que son usadas son todas subredes privadas, es decir direcciones privadas. Las cuales no puedes ser utilizadas en internet, sólo de forma privada dentro de la VPC, en una red doméstica o en oficina. 
+
+Regresando a la VPC
+
+En cada **Zona disponible** que compone la VPC tiene su propia subred pública y privada.
+
+Podrás preguntarte: ¿A qué se refiere con *Zona disponible*? 
+
+Bueno, la zona disponible o availability zone son las zonas que se encuentran dentro de la región, estás se dividen en letras, ejemplo:
+
+        Región => eu-west-1
+
+        Availavility Zone => a, b y c
+
+        eu-west-1a, eu-west-1b y eu-west-1c
+
+Estas subredes tienen su propio rango IP. En el caso de las subredes públicas, estas están conectadas a un *Internet Gateway*. Estas instancias también tendrán una dirección IP pública que les permitirá ser accesibles desde internet de las cosas.
+Las instancias públicas tendrán la dirección IP privada y pública.
+
+Las instancias lanzadas en la subred privada no tendrán la dirección IP pública, por lo que no serán accesibles desde el internet de las cosas. 
+
+- *Net Gateway* permitirá la comunicación de las instancias privadas para comunicarse con el exterior pero no de afuera hacia adentro.
+
+Las instancias públicas pueden llegar a las instancias privadas porque están dentro de la misma VPC. Esto es posible si se establece un firewall para permitir el tráfico de uno a otro.
+
+Normalmente, es usado las subredes públicas para los servicios o aplicaciones a internet. Para el caso de las bases de datos, los servicios de caché y los backends van en la subred privada. 
+
+Si se utiliza un *Load Balancer (LB)*, este comunmente se coloca en las subredes públicas. Por lo que el *LB* es a lo que se puede conecta desde internet y puede conectarse internamente a instancia en las subredes privadas.
