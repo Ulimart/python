@@ -42,10 +42,10 @@ Se debe de tener la configuración de cloud init en otro archivo y su script.
 
 **cloudini.tf**
 
-                provider "clouinit"{}
+                provider "clouinit"{} ## para este ejemplo cambiamos AWS => CLOUDINIT
 
                 data "template_file" "init_script"{
-                  template = "{$file("scripts/init.cfg")}"
+                  template = "{$file("scripts/init.cfg")}" ## se utilizará un templatefile para hacer referencia a otro script
                   vars{
                     region = "${var.AWS_REGION}"
                   }
@@ -75,3 +75,7 @@ Se debe de tener la configuración de cloud init en otro archivo y su script.
 
                 output:
                   all: '| tee -a /var/log/clou-init-output.log'
+
+¿Qué significa lo que tenemos arriba?
+
+Al crearse el cloudinit, se tomará este como provider y utilizar un templatefile que referencia a un script. Es
