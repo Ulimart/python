@@ -29,3 +29,16 @@ Este volumen se le debe de determinar:
         - tipo, los cuales pueden ser:
 
 (BUSCAR LOS TIPOS DE EBS)
+
+Si se quiere aumentar el almacenamiento o el tipo del volumen raíz, se debe utilizar *root_block_device* dentro del recurso *aws_instance*. Ejemplo:
+
+                resource "aws_instance" "caro"{
+                    ...
+                    root_block_device{
+                        volumen size = 16
+                        volumen_type = "gp2"
+                        delete_on_termination = true
+                    }
+                }
+
+La línea *delete_on_termination = true* es la especificación si se va a eliminar el volumen cuando la instancia sea terminada.
