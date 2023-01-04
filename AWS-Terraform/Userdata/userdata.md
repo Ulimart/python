@@ -44,22 +44,22 @@ Se debe de tener la configuración de cloud init en otro archivo y su script.
 
                 provider "clouinit"{} ## para este ejemplo cambiamos AWS => CLOUDINIT
 
-                data "template_file" "init_script"{
+                data "template_file" "init_script"{  ## aquí sale el "content"
                   template = "{$file("scripts/init.cfg")}" ## se utilizará un templatefile para hacer referencia a otro script
                   vars{
-                    region = "${var.AWS_REGION}"
+                    region = "${var.AWS_REGION}" ## agregamos una variable como *ejemplo* para tomar en cuenta que si se pueden agregar, en este caso no será usada.
                   }
                 }
 
-                data "template_cloudinit_config""cloudinit-example"{
+                data "template_cloudinit_config""cloudinit-example"{ ## este es el recurso que será un template
                   
-                  gzip = false
-                  base64_encode =false
+                  gzip = false ## le decimos que no usaremos ni gzip y base64, estos son diferentes formatos de esta nube 
+                  base64_encode =false  ##para este caso quedo como como texto
 
-                  part{
-                    filename = "init.config"
-                    content_type = "text/cloud-config"
-                    content = "${data.template_file.init_script.rendered}
+                  part{  ## contiene una parte
+                    filename = "init.cfg"  ## el nombre del archivo
+                    content_type = "text/cloud-config" ##el tipo del contenido y su tipo de contenido es un texto
+                    content = "${data.template_file.init_script.rendered} ## este contenido viene de la parte de arriba, es una linea anidada +  la parte de renderización. Aquí va a leer el siguiete archivo
                   }
                 }
 
