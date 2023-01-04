@@ -51,3 +51,71 @@ Ejemplo:
 En resumen, cuando se utiliza  AWS SDK, en el background se accederá a otro servicio de AWS (VOLVER A CHECAR)
 
 Es importante tener en cuenta que los role IAM sólo funcionan en instancias EC2 y no en instancias fuera de AWS; es decir, que si se tiene un servicio fuera de AWS, no se podrá asumir el rol, ya que los *roles IAM* sólo funcionan *dentro de la red de AWS*.
+
+Se necesita renovar las credenciales de acceso temporal, ya que sólo son válidas por un tiempo definido. 
+
+    - El AWS SDK se ocuprá de esto.
+
+### Creación
+
+- Para crear un grupo de *IAM administratos* en AWS, se genera el grupo y este se adjunta a la politica Administrator en AWS. O sea, se tiene un grupo y las politicas que ya creadas en AWS, y se pueden adjuntar.
+
+Ejemplo:
+
+                resource "aws_iam_group" "administrators" {  ## se crea el grupo y se le asigna un nombre
+                  name = "administrators"
+                }
+                       ## este se va a adjuntar a la política, ya que el grupo no tiene NI UN ACCESO
+                resource "aws_iam_policy_attachment" "administrators-attach" {
+                  name       = "administrators-attach"
+                  groups     = [aws_iam_group.administrators.name]
+                  policy_arn = "arn:aws:iam::aws:policy/AdministratorAccess"  ## Este es el nombre de la política, la cual ya estaba creada en AWS
+                }
+
+- Cualquier usuario añadido a este grupo tendrá acceso de admiiiiiiiiiiiiiiiiiiiiiiiiiiiiin!!!!!!
+
+- Es importante tener en cuenta que se pueden crear *políticas personalizadas*.
+
+Ejemplo:
+
+                resource "aws_iam_group" "administrators" {  ## a este grupo se le adjuntará una política personalizada
+                  name = "administrators"
+                }
+
+                resource "aws_iam_group_policy" "my_developer_policy" {
+                  name = "my_administrators_policy"
+                  role = aws_iam_group.administrators.id
+                  policy = <<EOF
+                {
+                  "Version": "2012-10-17",
+                  "Statement": [ ## se va a crear un statement policy, este debe de contener los 3 puntos de abajo
+                   {
+                     "Effect": "Allow", ## permite o deniega
+                     "Action": "*",     ## Esto es para *todo*, ya que tiene el *
+                     "Resource": "*"    ## En este caso es para *todos* los recursos
+                   }
+                  ]
+                }
+                EOF
+                }
+
+- Esta política va a permitir cada acción a cada recurso de AWS, a esto se le llamará *acceso de admin* :)
+
+-Por último, se crea un usuario y le asignará un grupo. Bueeeeeeeeeeeeeeeeeeeeeeeno en este ejemplo se crearon dos usuarios:
+
+                resource "aws_iam_user" "admin1" {
+                  name = "admin1"
+                }
+
+                resource "aws_iam_user" "admin2" {
+                  name = "admin2"
+                }
+
+                resource "aws_iam_group_membership" "administrators-users" {  ## aqui se añade los usuarios a los grupos
+                  name = "administrators-users"
+                  users = [
+                    "${aws_iam_user.admin1.name}",
+                    "${aws_iam_user.admin2.name}",
+                  ]
+                  group = aws_iam_group.administrators.name
+                }
