@@ -59,23 +59,26 @@ Se debe de tener la configuración de cloud init en otro archivo y su script.
                   part{  ## contiene una parte
                     filename = "init.cfg"  ## el nombre del archivo
                     content_type = "text/cloud-config" ##el tipo del contenido y su tipo de contenido es un texto
-                    content = "${data.template_file.init_script.rendered} ## este contenido viene de la parte de arriba, es una linea anidada +  la parte de renderización. Aquí va a leer el siguiete archivo
+                    content = "${data.template_file.init_script.rendered} ## este contenido viene de la parte de arriba, es una linea anidada +  la parte de renderización. Aquí va a leer el siguiete archivo "init.cfg"
                   }
                 }
+
+La razón por la que la configuración de cloudinit está en dividida es porque puede tener múltiples *parts*.
+
+El siguiente archivo es un script de configuración de la nube. Este tiene un formato determinado que puede encontrarse en google.
 
 **scripts/init.cfg**
 
                 #cloud-config
 
-                repo_date: true
-                repo_upgrade: all
+                repo_update: true  ## Aqui va a hacerle un update al repo
+                repo_upgrade: all  ## actulizará todos los paquetes del sistema operativo hasta los más viejitos
 
                 packages:
-                  - docker
+                  - docker ## el tipo de paquete que instalará
 
                 output:
-                  all: '| tee -a /var/log/clou-init-output.log'
+                  all: '| tee -a /var/log/clou-init-output.log' ## enviará un registro de salida a los logs de cloudinit
 
-¿Qué significa lo que tenemos arriba?
+Esta plantilla se utilza para poder pasar variables. 
 
-Al crearse el cloudinit, se tomará este como provider y utilizar un templatefile que referencia a un script. Es
