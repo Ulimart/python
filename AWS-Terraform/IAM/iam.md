@@ -101,7 +101,7 @@ Ejemplo:
 
 - Esta política va a permitir cada acción a cada recurso de AWS, a esto se le llamará *acceso de admin* :)
 
--Por último, se crea un usuario y le asignará un grupo. Bueeeeeeeeeeeeeeeeeeeeeeeno en este ejemplo se crearon dos usuarios:
+- Por último, se crea un usuario y le asignará un grupo. Bueeeeeeeeeeeeeeeeeeeeeeeno en este ejemplo se crearon dos usuarios:
 
                 resource "aws_iam_user" "admin1" {
                   name = "admin1"
