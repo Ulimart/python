@@ -11,7 +11,7 @@ Estos dos ejemplos son info dinámica, ya que cambia. Se puede usar como parte d
 
     - El tener la lista de IPs ayuda a filtrar el tráfico basado en una región de AWS, ya que se sabrá que dirección IP está en uso en alguna región de interés. Es decir, sólo se permitiría ciertas direcciones de la lista de IP.
 
-En relación con la filtración de tráfico en AWS, se puede usar los *security groups* (SG). 
+En relación con la filtración de tráfico en AWS, se puede usar los *security groups* (SEG). 
 
     - El tráfico entrante y saliente se puede filtrar por:
     
