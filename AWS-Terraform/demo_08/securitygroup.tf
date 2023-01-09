@@ -1,7 +1,7 @@
 resource "aws_security_group" "allow-ssh" {
-  vpc_id      = "${aws_vpc.caro-main.id}"
+  vpc_id      = "${aws_vpc.caro.id}"
   name        = "allow-ssh"
-  description = "este SEG permitirá la conexión ssh y todo el tráfico de salida"
+  description = "este SEG permitira la conexion ssh y todo el trafico de salida"
   egress {
     from_port   = 0
     to_port     = 0
