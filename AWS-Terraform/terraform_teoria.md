@@ -138,6 +138,8 @@ Sirve para aplicar cambios requeridos y btener la configuración deseada; o pred
 
 ***CLI*** => Command-line interface, se espera que los comandos de terraform se corran en este.
 
-***IaaS*** => Infra como código
+***IaaS*** => Infra como servicio, Infrastruture as a Service
 
-***PaaS*** =>
+***PaaS*** => Plataforma como servicio, Platform as a Service
+
+***SaaS*** => Software como servicio, Software as a Service

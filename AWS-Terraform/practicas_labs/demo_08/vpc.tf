@@ -24,7 +24,7 @@ resource "aws_subnet" "caro-public-sb" {
 
 resource "aws_subnet" "caro-private-sb" {
   vpc_id                  = "${aws_vpc.caro.id}"
-  cidr_block              = "10.0.4.0/24"
+  cidr_block              = "10.0.2.0/24"
   map_public_ip_on_launch = "false" ### se le asigna false porque de esta manera sólo tendrá una IP privada
   availability_zone       = "us-west-1a"
 

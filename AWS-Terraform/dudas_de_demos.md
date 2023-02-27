@@ -192,4 +192,12 @@ Puerto usado por el famoso videojuego Minecraft.
 
 ### VPC
 
-VPC => Red Privada Virtual
+VPC => Red Privada Virtual, Virtual Private Cloud
+
+*** IaaS ***
+
+*Infrastructure as a Service*:
+
+Part or all of an infra plataform provided by a third party
+
+

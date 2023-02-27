@@ -56,6 +56,18 @@ Se necesita renovar las credenciales de acceso temporal, ya que sólo son válid
 
     - El AWS SDK se ocuprá de esto.
 
+### ***Permisos***
+
+¿Por qué se crean los usuarios y grupos?
+
+Los usuarios representan a una persona dentro del proyecto/organización. Estos usuarios se pueden agrupar juntos.  
+
+Entonces, los usuarios y grupos se crean para poder permitir el uso de las cuentas de AWS, así que se les otorga permisos. 
+
+Para hacer esto posible se les asigna mediante una un documento json una política de IAM. En esta política se describe que tienen permitido hacer y en que grupo se encuentran los usuario.
+
+En AWS se aplica un principio llamado *principio de privilegio mínimo*. ENtonces no dará más permisos de los que necesita el usuario.
+
 ### Creación
 
 - Para crear un grupo de *IAM administratos* en AWS, se genera el grupo y este se adjunta a la politica Administrator en AWS. O sea, se tiene un grupo y las politicas que ya creadas en AWS, y se pueden adjuntar.
