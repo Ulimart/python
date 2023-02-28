@@ -10,7 +10,15 @@ Para trabajar con AWS y Terraform por medio de los servers de cloud gurú se pue
 
  - Tag, elegí un nombre que diferencie el server de otros
 
-2. Se inicia el server, se debe de cambiar la contraseña (este es un paso guiado por el mismo server)
+2. Se inicia el server
+
+    2.1 Para conectarse al server se usa ssh:
+
+        ssh cloud_user@<ip publica>
+
+        La ip publica es la que proporciona cloud gurú
+
+    2.2 Pide la contraseña que es la que también proporciona la plataforma, pero se debe de cambiar la contraseña (este es un paso guiado por el mismo server)
 
 3. Para poder trabajar con ***Terraform*** se debe de instalar el *CLI* (Command Line Interface) de terraform:
 
