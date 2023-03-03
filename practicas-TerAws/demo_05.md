@@ -92,3 +92,4 @@ Después de eso, la API se usará igual que cuando se tienen las credenciales no
 ## Grupo
 
 Para crear un grupo "X" de IAM en AWS, se debe de generar un grupo y adjuntarle la política, muchas políticas ya están creadas en AWS.
+   
